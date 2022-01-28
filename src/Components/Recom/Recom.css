@@ -24,7 +24,7 @@
   margin-left: 2px;
 }
 .person:hover .face {
-  transform: translateY(-10px) scale(1.25);
+  transform: translateY(-15%) scale(1.25);
   transition: transform 0.5s;
 }
 .person:hover {
@@ -40,6 +40,7 @@
   display: flex;
   justify-content: space-around;
   margin: 1%;
+  box-shadow: 0px 0px 10px rgba(16, 45, 104, 0.6);
 }
 .darkre {
   background-color: #1e5676;
@@ -61,7 +62,7 @@
 .divider {
   background-color: #ca6060;
   height: 1px;
-  width: 160px;
+  width: 100%;
   margin-bottom: 0;
 }
 .name {
@@ -103,3 +104,9 @@
 /* #img2,#img3{
   height: auto;
 } */
+
+@media only screen and (max-width: 768px) {
+  .person {
+    width: 80%;
+  }
+}

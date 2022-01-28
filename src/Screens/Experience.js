@@ -15,7 +15,7 @@ const Exp = () => {
 
         <Container Dark={isDark}>
             <InnerCont>
-                <Halfside first>
+                <Halfside First>
                     <BounceDiv Dark={isDark}>
                         <Shaker>S</Shaker>
                         <Shaker>k</Shaker>
@@ -37,7 +37,7 @@ const Exp = () => {
                         <Shaker>c</Shaker>
                         <Shaker>e</Shaker>
                     </BounceDiv>
-                    <Content Dark={isDark}>SI started my Front-end developer journey post my successful placement in one of the top ten Indian Startups in 2020. I was excited about the start of my career as a React Native developer(Building mobile applications), got connected on LinkedIn with four interested people, and developed a project named “Schoolferry.”
+                    <Content Dark={isDark}>I started my Front-end developer journey post my successful placement in one of the top ten Indian Startups in 2020. I was excited about the start of my career as a React Native developer(Building mobile applications), got connected on LinkedIn with four interested people, and developed a project named “Schoolferry.”
                         <br /><br />
                         By the time I joined the corporate world, I had hands-on experience building mobile apps and was a part of two projects. One of them is the “SPRY,” which is currently used by “50+ Institutes and 15,000+ Athletes in the USA. Developed skills like creating custom components, using Redux, following Atomic structure, and publishing a private dependency.
                         <br /><br />
