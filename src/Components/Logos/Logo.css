@@ -1,0 +1,107 @@
+@keyframes trail {
+  0% {
+    transform: translate(10vw, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-5vw, 35vh) rotate(90deg);
+  }
+  50% {
+    transform: translate(10vw, 65vh) rotate(180deg);
+  }
+  75% {
+    transform: translate(25vw, 35vh) rotate(270deg);
+  }
+  100% {
+    transform: translate(10vw, 0) rotate(360deg);
+  }
+}
+@keyframes trail2 {
+  0% {
+    transform: translate(-10vw, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(5vw, 15vh) rotate(90deg);
+  }
+  50% {
+    transform: translate(10vw, 25vh) rotate(180deg);
+  }
+  75% {
+    transform: translate(-5vw, 15vh) rotate(270deg);
+  }
+  100% {
+    transform: translate(-10vw, 0) rotate(360deg);
+  }
+}
+@keyframes trail3 {
+  0% {
+    transform: translate(-10vw, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(5vw, 15vh) rotate(90deg);
+  }
+  50% {
+    transform: translate(-10vw, 5vh) rotate(180deg);
+  }
+  75% {
+    transform: translate(-25vw, 15vh) rotate(270deg);
+  }
+  100% {
+    transform: translate(-10vw, 0) rotate(360deg);
+  }
+}
+.html {
+  color: #e0662e;
+  animation: trail 3s linear infinite;
+}
+.css {
+  color: #589dd6;
+  animation: trail2 4s linear infinite;
+}
+.redux {
+  color: #734dbc;
+  animation: trail3 3.5s linear infinite;
+  z-index: 5;
+}
+.github {
+  color: #161614;
+  animation: trail 3s linear infinite;
+}
+.ts {
+  color: #3b7bcc;
+  animation: trail2 3s linear infinite;
+}
+.fb {
+  color: #f3c941;
+  animation: trail3 3s linear infinite;
+}
+.vs {
+  color: #599ad4;
+  animation: trail 3s linear infinite;
+}
+.sass {
+  color: #c0689a;
+  animation: trail2 3s linear infinite;
+}
+.npm {
+  color: #bb393a;
+  animation: trail3 3s linear infinite;
+}
+.git {
+  color: #cd4d39;
+  animation: trail 3s linear infinite;
+}
+.node {
+  color: #619a42;
+  animation: trail2 3s linear infinite;
+}
+.lo {
+  width: 96%;
+  height: 96%;
+  border: white;
+  border-style: solid;
+  border-radius: 1em;
+  border-width: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}

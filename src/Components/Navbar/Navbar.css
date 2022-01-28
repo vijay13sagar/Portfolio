@@ -1,0 +1,57 @@
+.light,
+.Dark {
+  text-decoration: none;
+}
+.activeDark {
+  font-weight: bold;
+  -webkit-text-stroke: 0.2px #d0f7ff;
+  text-shadow: 2px 2px 4px #1ceaf1;
+}
+.activeLight {
+  -webkit-text-stroke: 1px #626363;
+  text-shadow: 2px 2px 4px #81a8fc;
+}
+.hor {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+}
+.hornav {
+  display: flex;
+  align-content: space-around;
+  justify-content: space-around;
+}
+.ver {
+  display: grid;
+  justify-content: center;
+  align-items: space-between;
+  height: 100px;
+  position: absolute;
+  width: 100%;
+  background-color: #11212f;
+}
+.lyt {
+  background-color: #f7f7f7;
+}
+.drk {
+  background-color: #11212f;
+}
+.icon {
+  display: none;
+}
+.noshow {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .icon {
+    display: flex;
+  }
+  .hornav {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .ver {
+    display: none;
+  }
+}

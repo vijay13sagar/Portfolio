@@ -1,0 +1,26 @@
+:root {
+  /* Nav Bar */
+  --NavDarkBg: #626363;
+  --NavDarkText: #d0f7ff;
+  --NavDarkTextBold: #00cffa;
+  /* LightMode */
+  --NavBg: #d0f7ff;
+  --NavText: #626363;
+  --NavTextBold: #000000;
+
+  /* Body */
+  --DarkBg: #6487a5;
+  --DarkHeadText: #72fcd7;
+  --DarkText: #ffffff;
+  /* LightMode */
+  --Bg: #f7f7f7;
+  --HeadText: #0075fe;
+  --Text: #000000;
+}
+.app {
+  text-align: left;
+  margin: 0;
+  /* font-family: 'Vujahday Script', cursive; */
+  background-color: white;
+  height: 100vh;
+}
