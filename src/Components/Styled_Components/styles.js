@@ -106,7 +106,7 @@ export const InnerCont = styled.div`
 `
 
 export const Halfside = styled.div`
-    width: fit-content;
+    width: 50%;
     /* margin: ${props => props.first ? 15 : 5}vh; */
     margin: 5vh 5vh 0;
     height: ${props => props.Height ? props.Height : 'auto'}vh;
@@ -119,6 +119,7 @@ export const Halfside = styled.div`
     position: relative;
     @media (max-width: 768px) {
         width: auto;
+        margin-top: ${props => props.First ? 12 : 0}vh;
   }
 `
 export const Image = styled.img`
@@ -127,7 +128,7 @@ export const Image = styled.img`
     
 `
 export const Card = styled.div`
-    width: 50%;
+    width: 45%;
     height: auto;
     margin: 1vh 1vw 1vh;
     border-color: ${props => props.Dark ? palette.NavDarkBg : palette.NavBg};
@@ -140,8 +141,8 @@ export const Card = styled.div`
     padding: 1em;
     box-shadow: 0px 0px 10px ${props => props.Dark ? palette.Text : palette.NavDarkBg};
     &:hover{
-        transform: scale3d(1.025,1.025,1);
-        box-shadow: 0px 0px 20px ${props => props.Dark ? palette.Text : palette.NavDarkBg};
+        transform: scale3d(1.01,1.025,1);
+        box-shadow: 0px 0px 15px ${props => props.Dark ? palette.Text : palette.NavDarkBg};
     }
     @media (max-width: 768px) {
     margin-top: 1vh;
@@ -209,6 +210,17 @@ export const OnlyHor = styled.div`
     justify-content: space-around;
     align-content:space-between;
     width: 100%;
+    @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`
+export const IconCont = styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-content:space-between;
+    width: 100%;
+
 `
 export const FlexVer = styled.div`
     display: grid;
@@ -241,7 +253,7 @@ export const NavBar = styled.nav`
     background-color: ${props => props.Dark ? palette.NavDarkBg : palette.NavBg};
     display: grid;
     align-items: center;
-    /* contain: content; */
+    contain: content;
 `
 export const List = styled.ul`
     display: flex;
@@ -257,7 +269,7 @@ export const ListItem = styled.li`
     align-items: center;
     margin-right: 5vw;
 `
-export const NavItem = styled.a`
+export const NavItem = styled.div`
     font-family: 'Alice', serif;
     font-size: ${palette.medium};
     color: ${props => props.Dark ? palette.NavDarkText : palette.NavText};
@@ -269,13 +281,11 @@ export const NavItem = styled.a`
     }
 `
 export const MyName = styled.a`
-    /* font-family: 'Sofia', cursive; */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: ${palette.medium};
     color: ${props => props.Dark ? palette.NavDarkText : palette.NavText};
 `
 export const SurName = styled.a`
-    /* font-family: 'Sofia', cursive; */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: ${palette.medium};
     color: ${props => props.Dark ? palette.NavDarkTextBold : palette.NavTextBold};
@@ -321,35 +331,39 @@ export const SubmitButton = styled.button`
     }
 `
 export const Modal = styled.div`
-    width: 30vw;
+    width: 60%;
     height: auto;
     border-radius: 2vw;
     border-style: solid;
     border-color: ${palette.NavDarkBg};
     border-width:1px;
-    /* background-color: ${palette.NavBg}; */
     background-image: url('https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png');
     display: grid;
     justify-items: center;
     align-items: center;
     margin: 30vh 30vw 30vh;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    @media (max-width: 568px) {
+    width:60vw;
+  }
 `
 export const ModalContainer = styled.div`
  width: 100%;
  height: 100%;
  justify-content: center;
  align-items: center;
- display: ${props => props.show ? 'flex' : 'none'};
+ display: flex;
  background-color: rgba(105, 105, 105,0.8);
 `
 export const Divider = styled.div`
 background-color: ${palette.NavDarkTextBold};
   height: 1px;
-  width: 100%;
+  width: 80%;
   margin: 5% 0% 5%;
 `
 export const ModalButton = styled.button`
- width: 25%;
+ width: 30%;
  background-color: ${palette.NavBg};
  color:black;
  border-radius: 30px;
@@ -365,7 +379,6 @@ color: whitesmoke;
     margin-bottom: 0;
 `
 export const ModalText = styled.p`
-    /* color: ${props => props.Dark ? palette.DarkText : palette.Text}; */
     color:white;
     font-size: ${palette.medium};
     font-weight: ${palette.regular};

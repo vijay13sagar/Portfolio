@@ -8,13 +8,11 @@ import skills from '../Assets/Skills.svg';
 
 const Home = () => {
     const [{ isDark }] = useContext(ThemeContext);
-    const [show, setShow] = useState('');
+
+    const [show, setShow] = useState();
     useEffect(() => {
-        if (localStorage.getItem("show") !== "false" || localStorage.getItem("show") !== null) {
-            localStorage.setItem("show", true);
-            setShow(true);
-        }
-    }, []);
+        setShow(localStorage.getItem("show") === 'null');
+    }, [])
     const closeModal = () => {
         localStorage.setItem('show', false);
         setShow(false);
@@ -22,7 +20,7 @@ const Home = () => {
     return (
         <Container Dark={isDark}>
 
-            {!show ? <InnerCont><Halfside first>
+            {!show ? <InnerCont><Halfside First>
                 <BounceDiv Dark={isDark}>
                     <Shaker>M</Shaker>
                     <Shaker>e</Shaker>
@@ -47,9 +45,9 @@ const Home = () => {
                     {/* <Logo/> */}
                 </Halfside>
             </InnerCont> :
-                <ModalContainer show={show}>
+                <ModalContainer>
                     <Modal>
-                        <ModalHead>NOTE</ModalHead>
+                        <ModalHead>NOTE{show}</ModalHead>
                         <Divider />
                         <ModalText>Hi, I developed this website without using any third-party plugins/dependencies. The dependencies I installed are React-router-dom, Styled-components, and React-icons. Happy reading my portfolio.</ModalText>
                         <ModalButton onClick={closeModal}>Close</ModalButton>

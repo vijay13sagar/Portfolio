@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Container, A, BounceDiv, Shaker, Space, Content, Halfside, Input, FlexHor, FlexVer, TextArea, SubmitButton, OnlyHor, InnerCont } from '../Components/Styled_Components/styles';
+import { Container, BounceDiv, Shaker, Space, Content, Halfside, Input, FlexHor, FlexVer, TextArea, SubmitButton, InnerCont, IconCont } from '../Components/Styled_Components/styles';
 import { ThemeContext } from "../Context/theme";
 import emailjs from 'emailjs-com';
 import { BsGithub, BsLinkedin, BsYoutube } from 'react-icons/bs';
@@ -12,7 +12,6 @@ const Contact = () => {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
-
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -43,7 +42,7 @@ const Contact = () => {
     return (
         <Container Dark={isDark}>
             <InnerCont>
-                <Halfside>
+                <Halfside First >
                     <BounceDiv Dark={isDark}>
                         <Shaker>C</Shaker>
                         <Shaker>o</Shaker>
@@ -68,12 +67,12 @@ const Contact = () => {
                             <SubmitButton type='submit' >Send</SubmitButton>
                         </FlexVer>
                     </form>
-                    <OnlyHor>
-                        <A href="https://www.linkedin.com/in/vizia-vidyasagar-kasina/" target="_blank"><BsLinkedin size='2em' color='#0077b5' /></A>
-                        <A href="https://github.com/vijay13sagar/" target="_blank"><BsGithub size='2em' color='black' /></A>
-                        <A href="https://www.youtube.com/channel/UCgT3Z4CF9gx9cRDuxfx1k8w" target="_blank"><BsYoutube size='2em' color='#FF0000' /></A>
-                        <A href="mailto:vijay13vidyasagar@gmail.com" target="_blank"><SiGmail size='2em' color='#FF0000' /></A>
-                    </OnlyHor>
+                    <IconCont>
+                        <BsLinkedin onClick={() => { window.open('https://www.linkedin.com/in/vizia-vidyasagar-kasina/'); }} size='2em' color='#0077b5' />
+                        <BsGithub onClick={() => { window.open('https://github.com/vijay13sagar/'); }} size='2em' color='black' />
+                        <BsYoutube onClick={() => { window.open('https://www.youtube.com/channel/UCgT3Z4CF9gx9cRDuxfx1k8w'); }} size='2em' color='#FF0000' />
+                        <SiGmail onClick={() => { window.open('mailto:vijay13vidyasagar@gmail.com'); }} size='2em' color='#FF0000' />
+                    </IconCont>
                 </Halfside>
             </InnerCont>
         </Container>
