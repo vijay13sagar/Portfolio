@@ -78,10 +78,24 @@ export const Footer = styled.h4`
 export const Content = styled.p`
     font-family: 'calibri';
     font-weight: 400;
-    font-size: ${palette.small};
+    font-size: ${palette.medium};
     margin: 0 0 0 0 ;
     color:${props => props.Dark ? palette.DarkText : palette.Text};
 `;
+export const Errormessage = styled.p`
+    font-family: 'calibri';
+    font-weight: 300;
+    font-size: ${palette.medium};
+    margin: 0 0 0 0 ;
+    color:red;
+`
+export const Successmessage = styled.p`
+    font-family: 'calibri';
+    font-weight: 300;
+    font-size: ${palette.medium};
+    margin-top: 1em;
+    color:green;
+`
 export const Container = styled.div`
     width: 100%;
     min-height: 92vh;
