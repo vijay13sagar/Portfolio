@@ -254,6 +254,9 @@ export const NavBar = styled.nav`
     display: grid;
     align-items: center;
     contain: content;
+    @media (max-height: 540px) {
+    height: 60px;
+  }
 `
 export const List = styled.ul`
     display: flex;
