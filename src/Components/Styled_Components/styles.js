@@ -93,7 +93,7 @@ export const Successmessage = styled.p`
     font-family: 'calibri';
     font-weight: 300;
     font-size: ${palette.medium};
-    margin-top: 1em;
+    margin-top: 0.5em;
     color:green;
 `
 export const Container = styled.div`
@@ -400,5 +400,12 @@ export const ModalText = styled.p`
     font-weight: ${palette.regular};
     font-family: 'calibri';
     margin:0px 5% 5%;
+`
+
+export const Hover = styled.div`
+    &:hover{
+        transform: scale3d(1.2,1.2,1);
+        transition: ease-in-out 0.5s;
+    }
 `
 

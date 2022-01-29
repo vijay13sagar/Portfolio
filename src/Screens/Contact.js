@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Container, BounceDiv, Shaker, Space, Content, Halfside, Input, FlexHor, FlexVer, TextArea, SubmitButton, InnerCont, IconCont,Errormessage, Successmessage } from '../Components/Styled_Components/styles';
+import { Container, BounceDiv, Shaker, Space, Content, Halfside, Input, FlexHor, FlexVer, TextArea, SubmitButton, InnerCont, IconCont,Errormessage, Successmessage, Hover } from '../Components/Styled_Components/styles';
 import { ThemeContext } from "../Context/theme";
 import emailjs from 'emailjs-com';
 import { BsGithub, BsLinkedin, BsYoutube } from 'react-icons/bs';
@@ -83,10 +83,10 @@ const Contact = () => {
                         </FlexVer>
                     </form>
                     <IconCont>
-                        <BsLinkedin onClick={() => { window.open('https://www.linkedin.com/in/vizia-vidyasagar-kasina/'); }} size='2em' color='#0077b5' />
-                        <BsGithub onClick={() => { window.open('https://github.com/vijay13sagar/'); }} size='2em' color='black' />
-                        <BsYoutube onClick={() => { window.open('https://www.youtube.com/channel/UCgT3Z4CF9gx9cRDuxfx1k8w'); }} size='2em' color='#FF0000' />
-                        <SiGmail onClick={() => { window.open('mailto:vijay13vidyasagar@gmail.com'); }} size='2em' color='#FF0000' />
+                        <Hover><BsLinkedin onClick={() => { window.open('https://www.linkedin.com/in/vizia-vidyasagar-kasina/'); }} size='2em' color='#0077b5' /></Hover>
+                        <Hover><BsGithub onClick={() => { window.open('https://github.com/vijay13sagar/'); }} size='2em' color='black' /></Hover>
+                        <Hover><BsYoutube onClick={() => { window.open('https://www.youtube.com/channel/UCgT3Z4CF9gx9cRDuxfx1k8w'); }} size='2em' color='#FF0000' /></Hover>
+                        <Hover><SiGmail onClick={() => { window.open('mailto:vijay13vidyasagar@gmail.com'); }} size='2em' color='#FF0000' /></Hover>
                     </IconCont>
                 </Halfside>
             </InnerCont>
