@@ -146,7 +146,7 @@ export const Card = styled.div`
     }
     @media (max-width: 768px) {
     margin-top: 1vh;
-    width:90%;
+    width:85%;
   }
 `
 export const CardHead = styled.h2`
@@ -199,7 +199,7 @@ export const ProgressPercent = styled.div`
 `
 export const FlexHor = styled.div`
     display: flex;
-    align-content:space-between;
+    align-content:space-around;
     margin-top: 2em;
     @media (max-width: 768px) {
     flex-direction: column;
@@ -331,7 +331,7 @@ export const SubmitButton = styled.button`
     }
 `
 export const Modal = styled.div`
-    width: 60%;
+    width: 40%;
     height: auto;
     border-radius: 2vw;
     border-style: solid;
@@ -341,16 +341,15 @@ export const Modal = styled.div`
     display: grid;
     justify-items: center;
     align-items: center;
-    margin: 30vh 30vw 30vh;
     overflow:hidden;
     text-overflow: ellipsis;
     @media (max-width: 568px) {
-    width:60vw;
+    width:60%;
   }
 `
 export const ModalContainer = styled.div`
  width: 100%;
- height: 100%;
+ height: 100vh;
  justify-content: center;
  align-items: center;
  display: flex;
