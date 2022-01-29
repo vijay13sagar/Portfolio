@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Container, BounceDiv, Shaker, Space, Content, Halfside, Input, FlexHor, FlexVer, TextArea, SubmitButton, InnerCont, IconCont } from '../Components/Styled_Components/styles';
+import { Container, BounceDiv, Shaker, Space, Content, Halfside, Input, FlexHor, FlexVer, TextArea, SubmitButton, InnerCont, IconCont,Errormessage, Successmessage } from '../Components/Styled_Components/styles';
 import { ThemeContext } from "../Context/theme";
 import emailjs from 'emailjs-com';
 import { BsGithub, BsLinkedin, BsYoutube } from 'react-icons/bs';
@@ -12,12 +12,13 @@ const Contact = () => {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
+    const [error,setError] = useState('');
+    const [success,setSuccess] = useState('');
     const sendEmail = (e) => {
         e.preventDefault();
-
         emailjs.sendForm('service_oxd2csi', 'template_yjonk6m', e.target, 'user_lTr7lZUJOA3BHNPx3bjtK')
-            .then((result) => {
-                alert("Your Message has been succesfully submitted to Vizia vidya sagar Kasina");
+            .then(function(response){
+                setSuccess("Your Message has been succesfully submitted to Vizia vidya sagar Kasina");
             }, (error) => {
                 alert(error.message);
             });
@@ -25,18 +26,30 @@ const Contact = () => {
         setEmail('');
         setSubject('');
         setMessage('');
+        setError('');
     };
-    const validateForm = () => {
+    const validateForm = (e) => {
+        e.preventDefault();
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
             if (name != '' && message != '') {
-                sendEmail();
-            } else {
-                alert('Please enter your Name and Message');
+                sendEmail(e);
+                
+            } else if(name == '' && message==''){
+                setError('Please fill Name and Message fields');
+                setSuccess('');
+            }else if(name == ''){
+                setError('Please fill Name field');
+                setSuccess('');
+            }
+            else if(message == ''){
+                setError('Please fill Message field');
+                setSuccess('');
             }
         } else {
-            alert('Please enter correct Email address');
+            setError('Please enter correct Email address');
+            
         }
-
+        setSuccess('');
     }
 
     return (
@@ -56,7 +69,7 @@ const Contact = () => {
                         <Shaker>e</Shaker>
                     </BounceDiv>
                     <Content Dark={isDark}>I’m interested in Full-time and freelance job opportunities, especially ambitious or enormous projects. However, if you have other requests or questions, don’t hesitate to use the form.</Content>
-                    <form onSubmit={validateForm}>
+                    <form onSubmit={(e)=>validateForm(e)}>
                         <FlexHor>
                             <Input type={'text'} name='Name' value={name} onChange={(e) => setName(e.target.value)} placeholder='* Name' />
                             <Input type={'email'} name='Email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='* Email' />
@@ -64,7 +77,9 @@ const Contact = () => {
                         <FlexVer>
                             <Input type={'text'} name='Subject' value={subject} onChange={(e) => setSubject(e.target.value)} placeholder='Subject' />
                             <TextArea type={'text'} rows={5} name='Message' value={message} onChange={(e) => setMessage(e.target.value)} placeholder='* Message' />
+                            <Errormessage>{error}</Errormessage>
                             <SubmitButton type='submit' >Send</SubmitButton>
+                            <Successmessage>{success}</Successmessage>
                         </FlexVer>
                     </form>
                     <IconCont>
