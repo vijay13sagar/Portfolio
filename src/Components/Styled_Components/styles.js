@@ -343,7 +343,7 @@ export const Modal = styled.div`
     align-items: center;
     overflow:hidden;
     text-overflow: ellipsis;
-    @media (max-width: 568px) {
+    @media (max-width: 768px) {
     width:60%;
   }
 `
