@@ -109,4 +109,8 @@
   .person {
     width: 80%;
   }
+  .picCont{
+    height: 20vw;
+    width: 20vw;
+  }
 }
