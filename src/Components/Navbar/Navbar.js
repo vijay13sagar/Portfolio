@@ -23,13 +23,13 @@ const Nav = () => {
                     </ToggleBut>
                     <List>
                         <div className='hornav'>
-                            <NavLink to='Portfolio/' className={({ isActive }) => (isActive & isDark ? 'activeDark Dark' : isActive & !isDark ? 'activeLight light' : isDark ? 'Dark' : 'light')}>
+                            <NavLink to='Portfolio.github.io/' className={({ isActive }) => (isActive & isDark ? 'activeDark Dark' : isActive & !isDark ? 'activeLight light' : isDark ? 'Dark' : 'light')}>
                                 <ListItem><NavItem Dark={isDark}>Home</NavItem></ListItem>
                             </NavLink>
-                            <NavLink to='Portfolio/Skills' className={({ isActive }) => (isActive & isDark ? 'activeDark Dark' : isActive & !isDark ? 'activeLight light' : isDark ? 'Dark' : 'light')}>
+                            <NavLink to='Portfolio.github.io/Skills' className={({ isActive }) => (isActive & isDark ? 'activeDark Dark' : isActive & !isDark ? 'activeLight light' : isDark ? 'Dark' : 'light')}>
                                 <ListItem><NavItem Dark={isDark}>My Skills</NavItem></ListItem>
                             </NavLink>
-                            <NavLink to='Portfolio/Contact' className={({ isActive }) => (isActive & isDark ? 'activeDark Dark' : isActive & !isDark ? 'activeLight light' : isDark ? 'Dark' : 'light')}>
+                            <NavLink to='Portfolio.github.io/Contact' className={({ isActive }) => (isActive & isDark ? 'activeDark Dark' : isActive & !isDark ? 'activeLight light' : isDark ? 'Dark' : 'light')}>
                                 <ListItem><NavItem Dark={isDark}>Contact</NavItem></ListItem>
                             </NavLink>
                         </div>
@@ -40,13 +40,13 @@ const Nav = () => {
             </NavBar>
             <nav>
                 <div className={isopen && isDark ? 'ver drk' : isopen && !isDark ? 'ver lyt' : 'noshow'}  >
-                    <NavLink to='Portfolio/' className={({ isActive }) => (isActive & isDark ? 'activeDark Dark' : isActive & !isDark ? 'activeLight light' : isDark ? 'Dark' : 'light')}>
+                    <NavLink to='Portfolio.github.io' className={({ isActive }) => (isActive & isDark ? 'activeDark Dark' : isActive & !isDark ? 'activeLight light' : isDark ? 'Dark' : 'light')}>
                         <ListItem><NavItem Dark={isDark}>Home</NavItem></ListItem>
                     </NavLink>
-                    <NavLink to='Portfolio/Skills' className={({ isActive }) => (isActive & isDark ? 'activeDark Dark' : isActive & !isDark ? 'activeLight light' : isDark ? 'Dark' : 'light')}>
+                    <NavLink to='Portfolio.github.io/Skills' className={({ isActive }) => (isActive & isDark ? 'activeDark Dark' : isActive & !isDark ? 'activeLight light' : isDark ? 'Dark' : 'light')}>
                         <ListItem><NavItem Dark={isDark}>My Skills</NavItem></ListItem>
                     </NavLink>
-                    <NavLink to='Portfolio/Contact' className={({ isActive }) => (isActive & isDark ? 'activeDark Dark' : isActive & !isDark ? 'activeLight light' : isDark ? 'Dark' : 'light')}>
+                    <NavLink to='Portfolio.github.io/Contact' className={({ isActive }) => (isActive & isDark ? 'activeDark Dark' : isActive & !isDark ? 'activeLight light' : isDark ? 'Dark' : 'light')}>
                         <ListItem><NavItem Dark={isDark}>Contact</NavItem></ListItem>
                     </NavLink>
                 </div>
