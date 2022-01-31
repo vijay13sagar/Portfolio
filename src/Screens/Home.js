@@ -40,7 +40,7 @@ const Home = () => {
                 </Content>
                 <Footer Dark={isDark}>Let's Build...</Footer>
             </Halfside>
-                <Halfside Height={80}>
+                <Halfside Height={70}>
                     <Image src={skills} alt='Skill set' />
                     {/* <Logo/> */}
                 </Halfside>

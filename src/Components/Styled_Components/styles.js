@@ -114,14 +114,14 @@ export const InnerCont = styled.div`
     display:flex ;
     justify-content: center;
     align-items: center;
-    @media (max-width: 768px) {
+    align-content: center;
+    @media (max-width: 1168px) {
     flex-direction: column;
   }
 `
 
 export const Halfside = styled.div`
     width: 50%;
-    /* margin: ${props => props.first ? 15 : 5}vh; */
     margin: 5vh 5vh 0;
     height: ${props => props.Height ? props.Height : 'auto'}vh;
     padding: 0;
@@ -131,7 +131,7 @@ export const Halfside = styled.div`
     contain: content;
     word-wrap: break-word;
     position: relative;
-    @media (max-width: 768px) {
+    @media (max-width: 1168px) {
         width: auto;
         margin-top: ${props => props.First ? 12 : 0}vh;
   }
@@ -139,6 +139,9 @@ export const Halfside = styled.div`
 export const Image = styled.img`
     width: 100%;
     height: 100%;
+    @media (max-width: 1168px) {
+        height: 50%;
+    }
     
 `
 export const Card = styled.div`
