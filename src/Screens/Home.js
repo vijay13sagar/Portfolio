@@ -1,7 +1,7 @@
 import React from 'react';
 import { useContext, useState, useEffect } from "react";
 import { ThemeContext } from "../Context/theme";
-import { Content, Footer, Halfside, Container, Image, Shaker, InnerCont, BounceDiv, Space, Modal, ModalContainer, ModalHead, Divider, ModalButton, ModalText, IconCard, Iconimg } from '../Components/Styled_Components/styles';
+import { Content, Footer, Halfside, Container,Back, Image, Shaker, InnerCont, BounceDiv, Space, Modal, ModalContainer, ModalHead, Divider, ModalButton, ModalText, IconCard, Iconimg } from '../Components/Styled_Components/styles';
 import css from '../Assets/css.png';
 import firebase from '../Assets/firebase.png';
 import git from '../Assets/git.png';
@@ -16,6 +16,9 @@ import redux from '../Assets/redux.png';
 import sass from '../Assets/sass.png';
 import typescri from '../Assets/typescri.png';
 import vs from '../Assets/vs.png';
+import Skills from '../Assets/Skills.svg';
+import back from '../Assets/back.jpg';
+import bg from '../Assets/bg.jpg';
 
 
 
@@ -32,7 +35,6 @@ const Home = () => {
     }
     return (
         <Container Dark={isDark}>
-
             {!show ? <InnerCont><Halfside First>
                 <BounceDiv Dark={isDark}>
                     <Shaker>M</Shaker>
@@ -53,7 +55,7 @@ const Home = () => {
                 </Content>
                 <Footer Dark={isDark}>Let's Build...</Footer>
             </Halfside>
-                <Halfside Height={70}>
+                <Halfside Height={60}>
                     <IconCard Top={15} Right={35}><Iconimg src={css}/></IconCard>
                     <IconCard Delay={0.2} Top={80} Right={30}><Iconimg src={firebase}/></IconCard>
                     <IconCard Delay={0.4} Top={50} Right={20}><Iconimg src={git}/></IconCard>
@@ -68,7 +70,7 @@ const Home = () => {
                     <IconCard Delay={0.5} Top={30} Right={70}><Iconimg src={sass}/></IconCard>
                     <IconCard Delay={0.7} Top={80} Right={10}><Iconimg src={typescri}/></IconCard>
                     <IconCard Delay={0.9} Top={10} Right={80}><Iconimg src={vs}/></IconCard>
-                    {/* <Image src={dp} alt='Skill set' /> */}
+                    <Image src={bg} alt='Skill set' />
                     {/* <Logo/> */}
                 </Halfside>
             </InnerCont> :
@@ -80,7 +82,6 @@ const Home = () => {
                         <ModalButton onClick={closeModal}>Close</ModalButton>
                     </Modal>
                 </ModalContainer>}
-
 
         </Container>
     );

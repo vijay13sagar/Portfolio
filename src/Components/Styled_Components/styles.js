@@ -155,17 +155,19 @@ export const Halfside = styled.div`
     position: relative;
     @media (max-width: 1168px) {
         width: auto;
-        margin-top: ${props => props.First ? 12 : 0}vh;
+        margin-top: ${props => props.First ? 12 : 5}vh;
   }
 `
 export const Image = styled.img`
+    width:auto;
     height: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 5%;
+    /* border-radius: 5%; */
     @media (max-width: 1168px) {
-        height: 50%;
+        width: 100%;
+        height: auto;
     }
     
 `
@@ -262,7 +264,6 @@ export const IconCont = styled.div`
     justify-content: space-around;
     align-content:space-between;
     width: 100%;
-
 `
 export const FlexVer = styled.div`
     display: grid;
@@ -452,8 +453,19 @@ export const IconCard =styled.div`
     right:${props => props.Right ? props.Right : 0 }%;
     &:hover{
         animation: ${back} 2s linear infinite;
-        
     }
+    @media (max-width: 1168px) {
+        top: ${props => props.Top ? props.Top : 0 }%;
+  }
+  @media (max-width: 940px) {
+        top: ${props => props.Top ? props.Top/1.3 : 0 }%;
+  }
+  @media (max-width: 750px) {
+        top: ${props => props.Top ? props.Top/2 : 0 }%;
+  }
+  @media (max-width: 490px) {
+        top: ${props => props.Top ? props.Top/3 : 0 }%;
+  }
 `
 
 export const Iconimg = styled.img`
