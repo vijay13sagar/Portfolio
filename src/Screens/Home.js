@@ -1,8 +1,21 @@
 import React from 'react';
 import { useContext, useState, useEffect } from "react";
 import { ThemeContext } from "../Context/theme";
-import { Content, Footer, Halfside, Container, Image, Shaker, InnerCont, BounceDiv, Space, Modal, ModalContainer, ModalHead, Divider, ModalButton, ModalText } from '../Components/Styled_Components/styles';
-import skills from '../Assets/Skills.svg';
+import { Content, Footer, Halfside, Container, Image, Shaker, InnerCont, BounceDiv, Space, Modal, ModalContainer, ModalHead, Divider, ModalButton, ModalText, IconCard, Iconimg } from '../Components/Styled_Components/styles';
+import css from '../Assets/css.png';
+import firebase from '../Assets/firebase.png';
+import git from '../Assets/git.png';
+import github from '../Assets/github.png';
+import html from '../Assets/html.png';
+import javascr from '../Assets/javascr.png';
+import Linux from '../Assets/Linux.png';
+import node from '../Assets/node.png';
+import npm from '../Assets/npm.png';
+import react from '../Assets/react.png';
+import redux from '../Assets/redux.png';
+import sass from '../Assets/sass.png';
+import typescri from '../Assets/typescri.png';
+import vs from '../Assets/vs.png';
 
 
 
@@ -41,7 +54,21 @@ const Home = () => {
                 <Footer Dark={isDark}>Let's Build...</Footer>
             </Halfside>
                 <Halfside Height={70}>
-                    <Image src={skills} alt='Skill set' />
+                    <IconCard Top={15} Right={35}><Iconimg src={css}/></IconCard>
+                    <IconCard Delay={0.2} Top={80} Right={30}><Iconimg src={firebase}/></IconCard>
+                    <IconCard Delay={0.4} Top={50} Right={20}><Iconimg src={git}/></IconCard>
+                    <IconCard Delay={0.6} Top={30} Right={45}><Iconimg src={github}/></IconCard>
+                    <IconCard Delay={0.8} Top={45} Right={80}><Iconimg src={html}/></IconCard>
+                    <IconCard Delay={1} Top={60} Right={60}><Iconimg src={javascr}/></IconCard>
+                    <IconCard Delay={1.2} Top={5} Right={60}><Iconimg src={Linux}/></IconCard>
+                    <IconCard Delay={1.4} Top={70} Right={45}><Iconimg src={node}/></IconCard>
+                    <IconCard Delay={1.6} Top={75} Right={80}><Iconimg src={npm}/></IconCard>
+                    <IconCard Delay={2} Top={50} Right={50}><Iconimg src={react}/></IconCard>
+                    <IconCard Delay={0.3} Top={25} Right={15}><Iconimg src={redux}/></IconCard>
+                    <IconCard Delay={0.5} Top={30} Right={70}><Iconimg src={sass}/></IconCard>
+                    <IconCard Delay={0.7} Top={80} Right={10}><Iconimg src={typescri}/></IconCard>
+                    <IconCard Delay={0.9} Top={10} Right={80}><Iconimg src={vs}/></IconCard>
+                    {/* <Image src={dp} alt='Skill set' /> */}
                     {/* <Logo/> */}
                 </Halfside>
             </InnerCont> :

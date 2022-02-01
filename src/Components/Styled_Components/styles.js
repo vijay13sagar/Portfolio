@@ -35,6 +35,27 @@ export const shake = keyframes`
     transform:scale3d(1.2,1,1);
   }
 `
+export const bounce = keyframes`
+0%{
+    transform:translateY(0px);  
+  }
+  50% {
+    transform:translateY(-20px); 
+  }
+  100% {
+    transform:translateY(0px); 
+  }
+`
+export const back = keyframes`
+    0%{
+        background-color: white;
+        transform: rotate(0deg);
+    }
+    100%{
+        background-color: blue;
+        transform: rotate(360deg);
+    }
+`
 
 export const Header = styled.h1`
     font-family: 'Alice', serif;
@@ -130,6 +151,7 @@ export const Halfside = styled.div`
     align-items: center;
     contain: content;
     word-wrap: break-word;
+    /* background-color: red; */
     position: relative;
     @media (max-width: 1168px) {
         width: auto;
@@ -137,8 +159,11 @@ export const Halfside = styled.div`
   }
 `
 export const Image = styled.img`
-    width: 100%;
     height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5%;
     @media (max-width: 1168px) {
         height: 50%;
     }
@@ -411,4 +436,27 @@ export const Hover = styled.div`
         transition: ease-in-out 0.5s;
     }
 `
+export const IconCard =styled.div`
+    background-color: white;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 5vw;
+    box-shadow: 0px 0px 5px grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: ${bounce} 3s infinite;
+    animation-delay: ${props =>props.Delay ? props.Delay: 0}s;
+    position: absolute;
+    top: ${props => props.Top ? props.Top : 0 }%;
+    right:${props => props.Right ? props.Right : 0 }%;
+    &:hover{
+        animation: ${back} 2s linear infinite;
+        
+    }
+`
 
+export const Iconimg = styled.img`
+    height: 80%;
+    
+`
