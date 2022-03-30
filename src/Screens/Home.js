@@ -1,7 +1,7 @@
 import React from 'react';
 import { useContext, useState, useEffect } from "react";
 import { ThemeContext } from "../Context/theme";
-import { Content, Footer, Halfside, Container,Back, Image, Shaker, InnerCont, BounceDiv, Space, Modal, ModalContainer, ModalHead, Divider, ModalButton, ModalText, IconCard, Iconimg } from '../Components/Styled_Components/styles';
+import { Content, Footer, Halfside, Container, Image, Shaker, InnerCont, BounceDiv, Space, Modal, ModalContainer, ModalHead, Divider, ModalButton, ModalText, IconCard, Iconimg } from '../Components/Styled_Components/styles';
 import css from '../Assets/css.png';
 import firebase from '../Assets/firebase.png';
 import git from '../Assets/git.png';

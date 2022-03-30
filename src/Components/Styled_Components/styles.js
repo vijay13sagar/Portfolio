@@ -49,11 +49,11 @@ export const bounce = keyframes`
 export const back = keyframes`
     0%{
         background-color: white;
-        transform: rotate(0deg);
+        transform: scale3d(1,1,1);
     }
     100%{
         background-color: blue;
-        transform: rotate(360deg);
+        transform: scale3d(0.5,0.5,1);
     }
 `
 
@@ -452,7 +452,7 @@ export const IconCard =styled.div`
     top: ${props => props.Top ? props.Top : 0 }%;
     right:${props => props.Right ? props.Right : 0 }%;
     &:hover{
-        animation: ${back} 2s linear infinite;
+        animation: ${back} 1s linear 1;
     }
     @media (max-width: 1168px) {
         top: ${props => props.Top ? props.Top : 0 }%;
@@ -469,6 +469,5 @@ export const IconCard =styled.div`
 `
 
 export const Iconimg = styled.img`
-    height: 80%;
-    
+    height: 80%;   
 `
