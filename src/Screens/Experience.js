@@ -48,7 +48,9 @@ const Exp = () => {
                 </Halfside>
                 <Halfside>
                     <SkillSet />
-                    <FlexHor>
+                </Halfside>
+            </InnerCont>
+                <FlexHor>
                         <Card Dark={isDark}>
                             <CardHead Dark={isDark}>Part-time Coding Instructor</CardHead>
                             <CardSub Dark={isDark}>Varsity Tutors<br />NOV 2021-Present</CardSub>
@@ -59,7 +61,7 @@ const Exp = () => {
                                 <br />• React Native Framework and React Library.</CardText>
                         </Card>
                         <Card Dark={isDark}>
-                            <CardHead Dark={isDark}>React Native Developer</CardHead>
+                            <CardHead Dark={isDark}>FrontEnd Developer</CardHead>
                             <CardSub Dark={isDark}>Nineleaps<br />DEC 2020- JUL 2021</CardSub>
                             <CardText Dark={isDark}>Developed two big projects during my work and was appreciated with the "Feather on the Hat" award as one of the top developers at the organization during May.
                                 <br /><br />Areas of Work:
@@ -67,10 +69,16 @@ const Exp = () => {
                                 <br />• HTML,CSS, mark-up languages and JavaScript, TypeScript scripting languages
                                 <br />• Redux, Atomic structure, JSON, Rest APIs Agile Scrum</CardText>
                         </Card>
+                        <Card Dark={isDark}>
+                            <CardHead Dark={isDark}>Full Stack Developer</CardHead>
+                            <CardSub Dark={isDark}>Co-operators<br />MAY 2022- Present</CardSub>
+                            <CardText Dark={isDark}>Designing user interactions on web pages and developing back-end website applications, Creating servers and databases for functionality, and Ensuring cross-platform optimization.
+                                <br /><br />Areas of Work:
+                                <br />• React.js, Node.js, PostgreSQL, ESQL, MySQL 
+                                <br />• JavaScript, TypeScript, HTML, CSS, 
+                                <br />• Redux, Atomic structure, Context, Rest APIs Agile Scrum</CardText>
+                        </Card>
                     </FlexHor>
-                </Halfside>
-
-            </InnerCont>
             <Halfside first>
                 <BounceDiv Dark={isDark}>
                     <Shaker>R</Shaker>

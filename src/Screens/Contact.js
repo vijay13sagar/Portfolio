@@ -76,17 +76,17 @@ const Contact = () => {
                         </FlexHor>
                         <FlexVer>
                             <Input type={'text'} name='Subject' value={subject} onChange={(e) => setSubject(e.target.value)} placeholder='Subject' />
-                            <TextArea type={'text'} rows={5} name='Message' value={message} onChange={(e) => setMessage(e.target.value)} placeholder='* Message' />
+                            <Input type={'text'} name='Message' value={subject} onChange={(e) => setSubject(e.target.value)} placeholder='* Message' Hei={6} />
                             <Errormessage>{error}</Errormessage>
                             <SubmitButton type='submit' >Send</SubmitButton>
                             <Successmessage>{success}</Successmessage>
                         </FlexVer>
                     </form>
                     <IconCont>
-                        <Hover><BsLinkedin onClick={() => { window.open('https://www.linkedin.com/in/vizia-vidyasagar-kasina/'); }} size='2em' color='#0077b5' /></Hover>
-                        <Hover><BsGithub onClick={() => { window.open('https://github.com/vijay13sagar/'); }} size='2em' color='black' /></Hover>
-                        <Hover><BsYoutube onClick={() => { window.open('https://www.youtube.com/channel/UCgT3Z4CF9gx9cRDuxfx1k8w'); }} size='2em' color='#FF0000' /></Hover>
-                        <Hover><SiGmail onClick={() => { window.open('mailto:vijay13vidyasagar@gmail.com'); }} size='2em' color='#FF0000' /></Hover>
+                        <Hover><BsLinkedin onClick={() => { window.open('https://www.linkedin.com/in/vizia-vidyasagar-kasina/'); }} size='3rem' color='#0077b5' /></Hover>
+                        <Hover><BsGithub onClick={() => { window.open('https://github.com/vijay13sagar/'); }} size='3rem' color='black' /></Hover>
+                        <Hover><BsYoutube onClick={() => { window.open('https://www.youtube.com/channel/UCgT3Z4CF9gx9cRDuxfx1k8w'); }} size='3rem' color='#FF0000' /></Hover>
+                        <Hover><SiGmail onClick={() => { window.open('mailto:vijay13vidyasagar@gmail.com'); }} size='3rem' color='#FF0000' /></Hover>
                     </IconCont>
                 </Halfside>
             </InnerCont>

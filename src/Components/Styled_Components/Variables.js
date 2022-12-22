@@ -13,7 +13,7 @@ export const DarkBg = '#11212F';//#11212F
 export const DarkHeadText = '#72FCD7';
 export const DarkText = '#FFFFFF';
 /* LightMode */
-export const Bg = '#F7F7F7';
+export const Bg = '#f5fcfc'; //'#EEEEEE'
 export const HeadText = '#0075FE';
 export const Text = '#000000';
 
